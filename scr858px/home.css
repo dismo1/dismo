@@ -250,10 +250,12 @@ form label .social-media a i {
   color: var(--main-color);
 }
 
-.body div p {
-
-color: var(--main-color);
+.body {
+  
+ color: var(--main-color); 
+  
 }
+
 
 .body div:last-child i {
   font-size: 50px;
