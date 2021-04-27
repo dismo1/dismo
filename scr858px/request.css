@@ -1,0 +1,324 @@
+*{
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  font-family: 'RocknRoll One', sans-serif;
+  padding: 0;
+}
+
+*,::before,::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--fourth-color)
+}
+
+:root {
+  --main-color:#0a043c;
+  --secondary-color:#03506f;
+  --third-color:#a3ddcb;
+  --fourth-color:#EBEBEB;
+  --dtrans:1000ms;
+}
+/*start-header*/
+.header {
+  width: 100%;
+  height: 100px;
+  background: var(--main-color);
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+}
+
+.header div img {
+ width: 100px;
+ height: 100px;
+ position: absolute;
+ top: 50%;
+ left: 4%;
+ transform: translate(-4%,-50%);
+}
+
+.header div h1 {
+  color: var(--third-color);
+  font-size: 16px;
+  margin-left: 110px;
+  
+}
+
+form label .icon {
+ margin-top: 35px;
+ right: 0;
+ position: fixed;
+ width: 40px;
+ display: flex;
+ flex-wrap: wrap;
+ margin-right: 20px;
+justify-content: flex-end;
+z-index: 5;
+}
+form label .icon span {
+background: var(--third-color);
+margin-bottom: 10px;
+height: 2px;
+transition :var(--dtrans);
+
+}
+form label .icon span:first-child {
+  width: 100%;
+  
+  
+} 
+form label .icon span:nth-child(2) {
+  width: 60%;
+  
+  
+}
+form label .icon span:last-child {
+  width: 100%;
+}
+
+form #check {
+  display: none;
+
+}
+form label .icon span:nth-child(2):hover {
+  width: 100%;
+}
+
+.links {
+  position: fixed;
+  top: -850px;
+  margin-top: 90px;
+  width: 100%;
+  height: 100vh;
+  background: var(--main-color);
+  transition: var(--dtrans);
+  transition-delay: .3s;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.links span {
+  margin-top: 60px;
+  display: block;
+ text-align: center;
+  margin-bottom: 100px;
+}
+
+.links span .link {
+  font-size: 30px;
+  color: var(--third-color);
+  border-bottom: 1px solid var(--third-color);
+}
+
+form .links span .link1{
+  padding: 45px 160px;
+}
+form .links span .link2 {
+  padding: 45px 140px;
+}
+form .links span .link3 {
+  padding: 45px 160px;
+}
+form .links span .link4 {
+  padding: 45px 130px;
+}
+
+form .links span .link1:hover {
+  background: #023642;
+}
+
+form .links span .link2:hover {
+  background: #023642;
+}
+
+form .links span .link3:hover {
+  background: #023642;
+}
+
+form .links span .link4:hover {
+  background: #023642;
+}
+
+#check:checked ~ .links{
+  top: 0;
+}
+
+form .lang {
+  display: none;
+  background: var(--secondary-color);
+  width: 250px;
+  height: 110px;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%,0);
+  border: 1px solid var(--third-color);
+  border-bottom: none;
+  margin-top: 75px;
+  }
+form .lang div  {
+  padding: 15px 10px;
+  border-bottom: 1px solid var(--third-color);
+
+}
+
+form .lang div a {
+ padding: 10px 100px; 
+  color: var(--third-color);
+  font-size: 20px;
+  
+}
+form .lang::before {
+  content: "";
+  border-left: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-top: 20px solid var(--third-color);
+  border-right: 20px solid transparent ;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+  margin-top: -25px;
+}
+
+
+
+form .links span .link4:hover ~ .lang {
+  display: block;
+}
+
+form label .social-media {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+form label .social-media a i {
+  margin: 0 10px;
+  color: var(--third-color);
+  border-bottom: 1px solid var(--third-color);
+  padding: 10px;
+}
+
+/*end-header*/ 
+ 
+/*Start input*/
+.inputs {
+  margin-top: 60px;
+  
+}
+
+.inputs form div {
+  position: relative;
+  margin-left: 2.5%;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+.inputs form div input {
+  border: 2px solid var(--main-color);
+  outline: none;
+  width: 390px;
+  height: 75px;
+  background: var(--fourth-color);
+  padding: 10px;
+}
+
+.inputs form div #describe {
+ border: 2px solid var(--main-color);
+ outline: none;
+ width: 390px;
+ height: 125px;
+ background: var(--fourth-color);
+ padding: 10px;
+}
+ 
+.inputs form div #logo-style {
+ border: 2px solid var(--main-color);
+ outline: none;
+ width: 390px;
+ height: 75px;
+ background: var(--fourth-color);
+ padding: 10px;
+}
+
+.inputs form div #submit:hover {
+  background: var(--main-color);
+  color: var(--fourth-color);
+  border-color: var(--third-color);
+}
+ 
+
+.inputs form div label:not(.check-icon)  {
+  position: absolute;
+  top: -12.5px;
+  padding: 0 5px 3px 5px;
+  font-size: 20px;
+  left: 10px;
+  background: var(--fourth-color);
+  
+}
+
+.inputs form .logo-style label {
+ position: absolute;
+  top: -12.5px !important;
+  left: 10px;
+  padding: 0 5px 3px 5px;
+  background: var(--fourth-color);
+  font-size: 20px;
+}
+
+
+
+
+  
+
+
+.icon-div {
+  border: 2px solid var(--main-color);
+  width: 390px;
+ height: 75px;
+ background: var(--fourth-color);
+ padding: 10px;
+
+}
+
+#email-check {
+  display: none;
+}
+
+.check-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  font-size:40px;
+  color: red;
+  transition: var(--dtrans);
+  
+}
+
+.check-p {
+   position: absolute;
+  top: -12.5px;
+  left: 10px;
+  padding: 0 5px 3px 5px;
+  background: var(--fourth-color);
+  font-size: 20px;
+
+  
+}
+#email-check:checked ~ label {
+  color: green;
+  
+}
+
+
+
+
+/*End input*/
+
+
+
